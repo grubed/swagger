@@ -1,0 +1,76 @@
+swagger:
+  title: 智能接口文档聚合服务
+  desc: 智能接口文档统一访问地址
+  version: v1.0.0
+  terms-of-service-url: http://git.zongsheng.tech/dev/${spring.application.name}/tree/master
+  license: Apache License
+  license-url: http://www.apache.org/licenses/LICENSE-2.0.html
+  base-package: com.zongs365
+  group-name: ${spring.application.name}
+  contact-name: weiyanhao
+  contact-url: http://git.zongsheng.tech/dev/${spring.application.name}.git
+  contact-email: weiyanhao@zongs365.com
+  service-schema: http
+  service-host: api-test.c5272df1d903047e184c1ca13d6a775f4.cn-hangzhou.alicontainer.com
+  authorization-key: Authorization
+  modules:
+    apiBasic:
+      name: 宗盛智能基础服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/basic/v2/api-docs?group=zongs-api-basic
+      swaggerVersion: 2.0
+    apiPlatform:
+      name: 宗盛智能平台服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/platform/v2/api-docs?group=zongs-api-platform
+      swaggerVersion: 2.0
+    apiMerchant:
+      name: 宗盛智能商户服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/merchant/v2/api-docs?group=zongs-api-merchant
+      swaggerVersion: 2.0
+    apiAuth:
+      name: 宗盛智能统一认证服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/auth/v2/api-docs?group=zongs-api-auth
+      swaggerVersion: 2.0
+    apiDevice:
+      name: 宗盛智能设备服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/device/v2/api-docs?group=zongs-api-device
+      swaggerVersion: 2.0
+    apiOrder:
+      name: 宗盛智能订单服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/order/v2/api-docs?group=zongs-api-order
+      swaggerVersion: 2.0
+    apiMember:
+      name: 宗盛智能会员服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/member/v2/api-docs?group=zongs-api-member
+      swaggerVersion: 2.0
+    apiFactory:
+      name: 宗盛智能工厂服务 API
+      url: ${swagger.service-schema}://${swagger.service-host}/factory/v2/api-docs?group=zongs-api-factory
+      swaggerVersion: 2.0
+    apiOpen:
+      name: 宗盛智能开放平台 API
+      url: ${swagger.service-schema}://${swagger.service-host}/openapi/v2/api-docs?group=zongs-api-open
+      swaggerVersion: 2.0
+    apiAssets:
+      name: 设备中心API文档汇总
+      url: ${swagger.service-schema}://${swagger.service-host}/facility-center-api/v2/api-docs
+      swaggerVersion: 2.0
+    appBuniess:
+      name: 宗盛新零售 APP 接口文档汇总
+      url: ${swagger.service-schema}://${swagger.service-host}/app-zongs-business/v2/api-docs?group=app-zongs-business
+      swaggerVersion: 2.0
+    webBuniess:
+      name: 运营 平台 接口文档汇总
+      url: ${swagger.service-schema}://${swagger.service-host}/web-zongs-business/v2/api-docs?group=web-zongs-business
+      swaggerVersion: 2.0
+    webPlat:
+      name: 管理 平台 接口文档汇总
+      url: ${swagger.service-schema}://${swagger.service-host}/web-zongs-plat/v2/api-docs?group=web-zongs-plat
+      swaggerVersion: 2.0
+    appFactory:
+      name: 工厂助手 APP 接口汇总
+      url: ${swagger.service-schema}://${swagger.service-host}/app-zongs-factory/v2/api-docs?group=app-zongs-factory
+      swaggerVersion: 2.0
+    weappReplenish:
+      name: 补货 WEAPP 接口汇总
+      url: ${swagger.service-schema}://${swagger.service-host}/weapp-zongs-replenish/v2/api-docs?group=weapp-zongs-replenish
+      swaggerVersion: 2.0

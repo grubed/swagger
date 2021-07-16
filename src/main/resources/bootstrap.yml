@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: zongs-service-swagger
+  profiles:
+    active: local
+  cloud:
+    nacos:
+      config:
+        file-extension: yml
+
+server:
+  port: 7006
+
+logging:
+  file:
+    max-history: 180
+    max-size: 200MB
+
+---
+spring:
+  profiles: local
+  cloud:
+    nacos:
+      server-addr: http://nacos-local.zongsheng.tech:80
+    inetutils:
+      use-only-site-local-interfaces: true
+
+---
+spring:
+  profiles: dev
+  cloud:
+    nacos:
+      server-addr: nacos-headless.default.svc.cluster.local:8848
+    inetutils:
+      use-only-site-local-interfaces: true
+
+
+---
+spring:
+  profiles: test
+  cloud:
+    nacos:
+      server-addr: nacos-headless.default.svc.cluster.local:8848
+    inetutils:
+      use-only-site-local-interfaces: true
+
+
+---
+spring:
+  profiles: prod
+  cloud:
+    nacos:
+      server-addr: nacos-headless.default.svc.cluster.local:8848
+    inetutils:
+      use-only-site-local-interfaces: true
+zongs:
+  is-debug: false
+  is-enable-swagger: false
